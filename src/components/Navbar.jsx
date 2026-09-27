@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-
+import logo from "../assets/imgi_1_logo-GdqARQRt.png";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,12 +17,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="brand" onClick={closeMenu}>
-            <div className="brand-logo">
-              <img
-                src="/imgi_1_logo-GdqARQRt.png"
-                alt="Photography Logo"
-              />
-            </div>
+             <div className="brand-logo">
+    <img
+      src={logo}
+      alt="Photography Logo"
+    />
+  </div>
 
             <div className="brand-text">
               <span className="brand-title">عدسة</span>
