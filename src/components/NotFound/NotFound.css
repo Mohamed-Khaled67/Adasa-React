@@ -1,0 +1,542 @@
+.not-found-page {
+position: relative;
+
+min-height: calc(100vh - 80px);
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+overflow: hidden;
+
+padding: 80px 16px;
+
+background: #0a0a0a;
+
+color: white;
+
+direction: rtl;
+}
+
+/* =================================
+Background Grid
+================================= */
+
+.not-found-grid {
+position: absolute;
+
+inset: 0;
+
+background-image:
+linear-gradient(
+rgba(38, 38, 38, 0.5) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(38, 38, 38, 0.5) 1px,
+transparent 1px
+);
+
+background-size: 60px 60px;
+
+pointer-events: none;
+}
+
+/* =================================
+Background Glows
+================================= */
+
+.not-found-glows {
+position: absolute;
+
+inset: 0;
+
+opacity: 0.4;
+
+pointer-events: none;
+}
+
+.not-found-glow {
+position: absolute;
+
+border-radius: 50%;
+
+filter: blur(100px);
+
+animation: not-found-float 6s ease-in-out infinite;
+}
+
+.not-found-glow-orange {
+width: 384px;
+height: 384px;
+
+top: 25%;
+left: 25%;
+
+background: rgba(249, 115, 22, 0.2);
+}
+
+.not-found-glow-yellow {
+width: 320px;
+height: 320px;
+
+right: 25%;
+bottom: 25%;
+
+background: rgba(234, 179, 8, 0.1);
+
+animation-duration: 8s;
+animation-delay: 1s;
+}
+
+/* =================================
+Floating Animation
+================================= */
+
+@keyframes not-found-float {
+0%,
+100% {
+transform: translateY(0);
+}
+
+50% {
+transform: translateY(-20px);
+}
+}
+
+/* =================================
+Main Content
+================================= */
+
+.not-found-content {
+position: relative;
+
+z-index: 2;
+
+width: 100%;
+max-width: 560px;
+
+margin: 0 auto;
+
+text-align: center;
+}
+
+/* =================================
+404 Number
+================================= */
+
+.not-found-number-wrapper {
+position: relative;
+
+margin-bottom: 24px;
+}
+
+.not-found-number {
+position: relative;
+
+z-index: 2;
+
+margin: 0;
+
+font-size: 140px;
+
+font-weight: 900;
+
+line-height: 1;
+
+user-select: none;
+
+background:
+linear-gradient(
+to right,
+#f97316,
+#eab308,
+#f97316
+);
+
+-webkit-background-clip: text;
+background-clip: text;
+
+-webkit-text-fill-color: transparent;
+}
+
+.not-found-number-shadow {
+position: absolute;
+
+inset: 0;
+
+z-index: 1;
+
+font-size: 140px;
+
+font-weight: 900;
+
+line-height: 1;
+
+color: rgba(249, 115, 22, 0.2);
+
+filter: blur(24px);
+
+user-select: none;
+
+pointer-events: none;
+}
+
+/* =================================
+Icon
+================================= */
+
+.not-found-icon-wrapper {
+position: relative;
+
+width: 112px;
+height: 112px;
+
+margin: 0 auto 32px;
+}
+
+.not-found-icon-bg {
+position: absolute;
+
+inset: 0;
+
+border-radius: 50%;
+
+border: 1px solid rgba(249, 115, 22, 0.3);
+
+background:
+linear-gradient(
+135deg,
+rgba(249, 115, 22, 0.2),
+rgba(234, 179, 8, 0.2)
+);
+}
+
+.not-found-icon {
+position: absolute;
+
+inset: 0;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+color: #f97316;
+
+font-size: 54px;
+}
+
+.not-found-square {
+position: absolute;
+
+width: 20px;
+height: 20px;
+
+top: -8px;
+right: -8px;
+
+border-radius: 7px;
+
+background: #f97316;
+
+transform: rotate(12deg);
+
+animation: not-found-bounce 1.5s infinite;
+}
+
+.not-found-dot {
+position: absolute;
+
+width: 16px;
+height: 16px;
+
+left: -12px;
+bottom: -4px;
+
+border-radius: 50%;
+
+background: #eab308;
+
+animation: not-found-pulse 2s infinite;
+}
+
+/* =================================
+Icon Animations
+================================= */
+
+@keyframes not-found-bounce {
+0%,
+100% {
+transform: translateY(0) rotate(12deg);
+}
+
+50% {
+transform: translateY(-6px) rotate(12deg);
+}
+}
+
+@keyframes not-found-pulse {
+0%,
+100% {
+opacity: 1;
+transform: scale(1);
+}
+
+50% {
+opacity: 0.5;
+transform: scale(0.8);
+}
+}
+
+/* =================================
+Title
+================================= */
+
+.not-found-title {
+margin: 0 0 16px;
+
+color: white;
+
+font-size: 30px;
+
+font-weight: 700;
+
+line-height: 1.4;
+}
+
+/* =================================
+Description
+================================= */
+
+.not-found-description {
+max-width: 500px;
+
+margin: 0 auto 32px;
+
+color: #a3a3a3;
+
+font-size: 18px;
+
+line-height: 1.8;
+}
+
+/* =================================
+Buttons
+================================= */
+
+.not-found-buttons {
+display: flex;
+
+justify-content: center;
+
+gap: 16px;
+
+margin-bottom: 48px;
+}
+
+.not-found-btn {
+min-height: 48px;
+
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+gap: 8px;
+
+padding: 12px 22px;
+
+border-radius: 999px;
+
+text-decoration: none;
+
+font-size: 14px;
+
+font-weight: 600;
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+background 0.3s ease,
+border-color 0.3s ease;
+}
+
+/* Primary */
+
+.not-found-btn-primary {
+background:
+linear-gradient(
+135deg,
+#f97316,
+#ea580c
+);
+
+color: white;
+
+box-shadow:
+0 6px 20px rgba(249, 115, 22, 0.15);
+}
+
+.not-found-btn-primary:hover {
+color: white;
+
+transform: translateY(-2px);
+
+box-shadow:
+0 10px 28px rgba(249, 115, 22, 0.25);
+}
+
+/* Secondary */
+
+.not-found-btn-secondary {
+background: #161616;
+
+color: #d4d4d4;
+
+border: 1px solid #262626;
+}
+
+.not-found-btn-secondary:hover {
+color: white;
+
+border-color: #404040;
+
+background: #1c1c1c;
+
+transform: translateY(-2px);
+}
+
+/* =================================
+Useful Links
+================================= */
+
+.not-found-links {
+padding-top: 32px;
+
+border-top: 1px solid #262626;
+}
+
+.not-found-links p {
+margin: 0 0 16px;
+
+color: #737373;
+
+font-size: 14px;
+}
+
+.not-found-links > div {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 16px;
+}
+
+.not-found-links a {
+color: #f97316;
+
+text-decoration: none;
+
+font-size: 14px;
+
+font-weight: 500;
+
+transition:
+color 0.3s ease,
+text-decoration 0.3s ease;
+}
+
+.not-found-links a:hover {
+color: #fb923c;
+
+text-decoration: underline;
+}
+
+.not-found-links span {
+color: #525252;
+}
+
+/* =================================
+Responsive
+================================= */
+
+@media (min-width: 768px) {
+.not-found-number,
+.not-found-number-shadow {
+font-size: 180px;
+}
+}
+
+@media (max-width: 767px) {
+
+.not-found-page {
+min-height: calc(100vh - 70px);
+
+
+padding: 60px 16px;
+
+
+}
+
+.not-found-number,
+.not-found-number-shadow {
+font-size: 120px;
+}
+
+.not-found-title {
+font-size: 24px;
+}
+
+.not-found-description {
+font-size: 16px;
+}
+
+.not-found-buttons {
+flex-direction: column;
+width: 100%;
+
+max-width: 320px;
+
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.not-found-btn {
+width: 100%;
+}
+
+.not-found-glow-orange {
+width: 280px;
+height: 280px;
+left: -100px;
+}
+
+.not-found-glow-yellow {
+width: 240px;
+height: 240px;
+right: -100px;
+}
+}
+
+@media (max-width: 400px) {
+
+.not-found-number,
+.not-found-number-shadow {
+font-size: 100px;
+}
+
+.not-found-icon-wrapper {
+width: 96px;
+height: 96px;
+}
+
+.not-found-icon {
+font-size: 46px;
+}
+}

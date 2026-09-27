@@ -1,0 +1,495 @@
+.footer-custom {
+position: relative;
+
+background: #0a0a0a;
+color: #d4d4d4;
+
+overflow: hidden;
+
+border-top: 1px solid #262626;
+
+direction: rtl;
+}
+
+/* =================================
+Background Decorations
+================================= */
+
+.footer-glow {
+position: absolute;
+
+width: 384px;
+height: 384px;
+
+border-radius: 50%;
+
+filter: blur(70px);
+
+pointer-events: none;
+
+opacity: 0.6;
+}
+
+.footer-glow-left {
+top: 0;
+left: 25%;
+
+background: rgba(249, 115, 22, 0.05);
+}
+
+.footer-glow-right {
+right: 25%;
+bottom: 0;
+
+background: rgba(234, 179, 8, 0.05);
+}
+
+/* =================================
+Main Container
+================================= */
+
+.footer-container {
+position: relative;
+
+padding-top: 64px;
+padding-bottom: 64px;
+}
+
+/* =================================
+Brand
+================================= */
+
+.footer-brand {
+display: inline-flex;
+
+align-items: center;
+
+gap: 12px;
+
+margin-bottom: 24px;
+
+color: white;
+
+text-decoration: none;
+
+transition: all 0.3s ease;
+}
+
+.footer-brand:hover {
+color: white;
+}
+
+/* Logo */
+
+.footer-logo {
+width: 44px;
+height: 44px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 12px;
+
+background:
+linear-gradient(
+135deg,
+#f97316,
+#ea580c
+);
+
+color: white;
+
+font-size: 20px;
+
+box-shadow:
+0 4px 20px rgba(249, 115, 22, 0.3);
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.footer-logo i {
+font-size: 19px;
+}
+
+.footer-brand:hover .footer-logo {
+transform: scale(1.05);
+}
+
+/* Brand Name */
+
+.footer-brand > span {
+font-size: 20px;
+
+font-weight: 700;
+
+color: white;
+}
+
+/* =================================
+Description
+================================= */
+
+.footer-description {
+max-width: 300px;
+
+margin-bottom: 24px;
+
+color: #737373;
+
+font-size: 14px;
+
+line-height: 1.9;
+}
+
+/* =================================
+Social Media
+================================= */
+
+.footer-social {
+display: flex;
+
+gap: 8px;
+}
+
+.footer-social a {
+width: 40px;
+height: 40px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+background: #161616;
+
+border: 1px solid #262626;
+
+border-radius: 12px;
+
+color: #737373;
+
+text-decoration: none;
+
+font-size: 18px;
+
+transition:
+color 0.3s ease,
+background 0.3s ease,
+border-color 0.3s ease,
+transform 0.3s ease;
+}
+
+.footer-social a:hover {
+color: white;
+
+border-color: transparent;
+
+background:
+linear-gradient(
+135deg,
+#f97316,
+#ea580c
+);
+
+transform: scale(1.1);
+}
+
+/* =================================
+Section Title
+================================= */
+
+.footer-title {
+display: flex;
+
+align-items: center;
+
+gap: 8px;
+
+margin-bottom: 24px;
+
+color: white;
+
+font-size: 16px;
+
+font-weight: 600;
+}
+
+.footer-title > span {
+width: 32px;
+height: 2px;
+
+flex-shrink: 0;
+
+border-radius: 999px;
+
+background:
+linear-gradient(
+to right,
+#f97316,
+#eab308
+);
+}
+
+/* =================================
+Footer Links
+================================= */
+
+.footer-links {
+padding: 0;
+margin: 0;
+
+list-style: none;
+}
+
+.footer-links li {
+margin-bottom: 16px;
+}
+
+.footer-links a {
+display: inline-flex;
+
+align-items: center;
+
+gap: 8px;
+
+color: #737373;
+
+text-decoration: none;
+
+font-size: 14px;
+
+transition:
+color 0.3s ease;
+}
+
+/* Arrow */
+
+.footer-links a i {
+width: 16px;
+
+opacity: 0;
+
+transform: translateX(8px);
+
+color: #f97316;
+
+font-size: 12px;
+
+transition:
+opacity 0.3s ease,
+transform 0.3s ease;
+}
+
+.footer-links a:hover {
+color: #f97316;
+}
+
+.footer-links a:hover i {
+opacity: 1;
+
+transform: translateX(0);
+}
+
+/* =================================
+Newsletter
+================================= */
+
+.newsletter-description {
+margin-bottom: 16px;
+}
+
+/*
+اسم مختلف عن Home.css
+علشان مفيش تعارض
+*/
+
+.footer-newsletter-form {
+display: flex;
+
+flex-direction: column;
+
+gap: 12px;
+}
+
+/* Input */
+
+.footer-newsletter-form input {
+width: 100%;
+
+padding: 12px 16px;
+
+background: #161616;
+
+border: 1px solid #262626;
+
+border-radius: 12px;
+
+outline: none;
+
+color: white;
+
+font-size: 14px;
+
+transition:
+border-color 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.footer-newsletter-form input::placeholder {
+color: #525252;
+}
+
+.footer-newsletter-form input:focus {
+border-color: #f97316;
+
+box-shadow:
+0 0 0 1px #f97316;
+}
+
+/* Subscribe Button */
+
+.footer-newsletter-form button {
+width: 100%;
+
+padding: 11px 16px;
+
+border: none;
+
+/*
+زي btn-primary
+لكن Rounded بالكامل
+*/
+border-radius: 999px;
+
+background:
+linear-gradient(
+135deg,
+#f97316,
+#ea580c
+);
+
+color: white;
+
+font-size: 14px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+filter 0.3s ease;
+}
+
+.footer-newsletter-form button:hover {
+transform: translateY(-2px);
+
+filter: brightness(1.05);
+
+box-shadow:
+0 8px 20px rgba(249, 115, 22, 0.2);
+}
+
+.footer-newsletter-form button:active {
+transform: translateY(0);
+}
+
+/* =================================
+Bottom Footer
+================================= */
+
+.footer-bottom {
+position: relative;
+
+border-top: 1px solid #262626;
+}
+
+.footer-bottom-content {
+min-height: 72px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 16px;
+}
+
+.footer-bottom p {
+margin: 0;
+
+color: #525252;
+
+font-size: 14px;
+}
+
+.footer-bottom p i {
+margin: 0 3px;
+
+color: #f97316;
+
+font-size: 13px;
+}
+
+/* Legal */
+
+.footer-legal {
+display: flex;
+
+gap: 24px;
+}
+
+.footer-legal a {
+color: #525252;
+
+text-decoration: none;
+
+font-size: 14px;
+
+transition:
+color 0.3s ease;
+}
+
+.footer-legal a:hover {
+color: #f97316;
+}
+
+/* =================================
+Responsive
+================================= */
+
+@media (max-width: 767px) {
+
+.footer-container {
+padding-top: 48px;
+padding-bottom: 48px;
+}
+
+.footer-bottom-content {
+flex-direction: column;
+
+
+justify-content: center;
+
+text-align: center;
+
+padding: 20px 0;
+
+
+}
+
+.footer-legal {
+gap: 16px;
+}
+
+.footer-glow {
+width: 250px;
+height: 250px;
+}
+}

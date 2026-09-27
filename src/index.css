@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap");
+
+:root {
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Alexandria", sans-serif;
+}
